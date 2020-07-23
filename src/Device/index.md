@@ -1,182 +1,25 @@
 ---
 nav:
-  title: Components
+  title: 组件
   path: /components
 ---
 
-```tsx | inline
+
+## Device
+
+用于移动端组件库的预览，支持基本交互，底部支持跳转到源码地址，支持线上二维码预览。
+
+```tsx | pre
 import React from 'react';
 import { Device } from 'dumi-theme-alita';
 
-export default () => <div style={{position: 'fixed',
-    top: '75px',
-    right: '20px',zIndex:'99'}}><Device url="http://localhost:1123" /></div>;
+export default () => <Device url="https://mobile.ant.design/kitchen-sink/" source="https://github.com/alitajs/dumi-theme-alita/tree/master/src/Device" />;
 ```
 
-## Foo
+## API
 
-
-```tsx
-import React from 'react';
-import { Foo } from 'dumi-theme-alita';
-
-export default () => <Foo />;
-```
-
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-Demo:
-
-Demo:
-
-
-
-More skills for writing demo: https://d.umijs.org/guide/demo-principle
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| url | 预览的ur链接，支持本地的开发路径 | string | - |
+| source | 源码的地址，用于底部点击跳转路径 | string | - |
+| language | 国际化语言包 | string | zh-cn |
