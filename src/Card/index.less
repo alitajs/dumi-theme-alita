@@ -1,0 +1,124 @@
+@import '../index.less';
+
+.dumi-alita-card {
+  background-color: @dumi-alita-background;
+  border-radius: 4px;
+  box-shadow: 0px 0.175em 0.5em rgba(2, 8, 20, 0.1),
+    0px 0.085em 0.175em rgba(2, 8, 20, 0.08);
+  color: @dumi-alita-color-light;
+  display: flex;
+  flex-direction: column;
+  font-size: inherit;
+  font-weight: normal;
+  height: 100%;
+  justify-content: flex-start;
+  line-height: 1.6;
+  transition: box-shadow 150ms ease, transform 150ms ease;
+  width: 100%;
+  overflow: hidden;
+
+  .dumi-alita-card-with-image {
+    grid-row: span 2;
+  }
+
+  .dumi-alita-card-without-image {
+    font-size: 12px;
+  }
+
+  .dumi-alita-card-header {
+    color: #020814;
+    font-size: 1.2em;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 0.45em;
+
+    svg {
+      fill: currentColor;
+      height: 1em;
+      margin-bottom: -0.125em;
+      width: auto;
+    }
+  }
+
+  .dumi-alita-card-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .dumi-alita-card-container {
+    padding: 1.65em 2em 1.65em;
+
+    .dumi-alita-card-icon {
+      margin-bottom: 1.2em;
+      border-radius: 50%;
+      object-fit: cover;
+      width: 48px;
+      height: 48px;
+    }
+
+    .dumi-alita-card-iconset-container {
+      position: relative;
+      margin-bottom: 1.2em;
+      width: 48px;
+      height: 48px;
+
+      .dumi-alita-card-iconset {
+        position: absolute;
+        opacity: 0;
+        -webkit-transition: 0.8s opacity;
+        transition: 0.8s opacity;
+      }
+
+      .dumi-alita-card-iconset-active {
+        opacity: 1;
+      }
+    }
+
+    .dumi-alita-card-ionicon {
+      float: left;
+      margin-right: 1em;
+      width: 48px;
+      height: 48px;
+    }
+
+    .dumi-alita-card-content {
+      grid-area: body;
+      max-height: 42px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      color: @dumi-alita-color-light;
+      font-size: @dumi-alita-content-font-size;
+      font-weight: 400;
+      margin: 0 0 0.65em 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .dumi-alita-card-size-lg .dumi-alita-card-icon,
+  .dumi-alita-card-size-lg .dumi-alita-card-ionicon,
+  .dumi-alita-card-size-lg .dumi-alita-card-iconset,
+  .dumi-alita-card-size-lg .dumi-alita-card-iconset-container {
+    width: 80px;
+    height: 80px;
+  }
+
+  .dumi-alita-card-size-lg .dumi-alita-card-header {
+    font-size: 20px;
+  }
+}
+
+.dumi-alita-card-hover:hover {
+  box-shadow: 0 0.35em 1.175em rgba(2, 8, 20, 0.1),
+    0 0.175em 0.5em rgba(2, 8, 20, 0.08);
+  transform: translateY(-1px);
+}

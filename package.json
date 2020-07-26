@@ -32,10 +32,11 @@
   },
   "dependencies": {
     "alita": "^2.5.5",
+    "antd": "4.4.3",
+    "classnames": "^2.2.6",
     "cross-env": "^7.0.2",
     "qrcode.react": "^1.0.0",
-    "react": "^16.12.0",
-    "antd":"4.4.3"
+    "react": "^16.12.0"
   },
   "devDependencies": {
     "@umijs/preset-react": "1.x",
@@ -48,5 +49,7 @@
     "prettier": "^1.19.1",
     "yorkie": "^2.0.0"
   },
-  "files": ["dist"]
+  "files": [
+    "dist"
+  ]
 }
