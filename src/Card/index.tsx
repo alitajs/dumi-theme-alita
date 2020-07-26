@@ -23,6 +23,13 @@ const Card: FC<CardProps> = props => {
   const isStatic = !href;
   const isOutbound = /^http/.test(href);
 
+  const cardClass = classnames({
+    'dumi-alita-card-with-image': !!img,
+    'dumi-alita-card-without-image': !img,
+    'dumi-alita-card': true,
+    'dumi-alita-card-hover': true,
+  });
+
   const tic = () => {
     if (!iconset) return;
     if (i >= iconset.length - 1) {
@@ -56,8 +63,6 @@ const Card: FC<CardProps> = props => {
     return (
       <div
         className={classnames({
-          'dumi-alita-card-with-image': !!img,
-          'dumi-alita-card-without-image': !img,
           'dumi-alita-card-size-lg': size === 'lg',
         })}
       >
@@ -93,26 +98,19 @@ const Card: FC<CardProps> = props => {
   };
 
   if (isStatic) {
-    return <div className="dumi-alita-card">{content()}</div>;
+    return <div className={cardClass}>{content()}</div>;
   }
 
   if (isOutbound) {
     return (
-      <a className="dumi-alita-card dumi-alita-card-hover" href={href}>
+      <a className={cardClass} href={href}>
         {content()}
       </a>
     );
   }
 
   return (
-    <a
-      className={classnames({
-        'dumi-alita-card': true,
-        'dumi-alita-card-hover': href,
-      })}
-      onClick={() => {}}
-      href={href}
-    >
+    <a className={cardClass} onClick={() => {}} href={href}>
       {content()}
     </a>
   );
