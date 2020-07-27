@@ -6,19 +6,15 @@ interface ButtonProps {
 }
 
 const Button: FC<ButtonProps> = ({ children, href }) => {
-  const btnContent = () => {
-    if (typeof href === 'string') {
-      return (
-        <a href={href} className="dumi-alita-button-a">
-          {children}
-        </a>
-      );
-    } else {
-      return <button className="dumi-alita-button-btn">{children}</button>;
-    }
-  };
+  if (typeof href === 'string') {
+    return (
+      <a href={href} className="dumi-alita-button-a">
+        {children}
+      </a>
+    );
+  }
 
-  return <div className="dumi-alita-button">{btnContent()}</div>;
+  return <div className="dumi-alita-button">{children}</div>;
 };
 
 export default Button;
