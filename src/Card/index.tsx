@@ -7,7 +7,6 @@ interface CardProps {
   href: string;
   img?: string;
   icon?: string;
-  ionicon?: string;
   iconset?: string[];
   size?: 'md' | 'lg';
 }
@@ -15,7 +14,7 @@ interface CardProps {
 let i = 0;
 
 const Card: FC<CardProps> = props => {
-  const { children, header, href, img, icon, ionicon, iconset, size } = props;
+  const { children, header, href, img, icon, iconset, size } = props;
   const [activeIndex, setActiveIndex] = useState(0);
 
   let interval: NodeJS.Timeout | null = null;
@@ -73,7 +72,6 @@ const Card: FC<CardProps> = props => {
           })}
         >
           {icon && <img src={icon} className="dumi-alita-card-icon" />}
-          {ionicon && <img src={ionicon} className="dumi-alita-card-ionicon" />}
           {iconset && (
             <div className="dumi-alita-card-iconset-container">
               {iconset.map((icon, index) => (
@@ -110,7 +108,7 @@ const Card: FC<CardProps> = props => {
   }
 
   return (
-    <a className={cardClass} onClick={() => {}} href={href}>
+    <a className={cardClass} href={href}>
       {content()}
     </a>
   );
