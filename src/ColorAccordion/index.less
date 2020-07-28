@@ -1,0 +1,79 @@
+@import '../index.less';
+
+.dumi-alita-color-accordion {
+  display: block;
+  padding-top: 20px;
+  margin-bottom: 80px;
+
+  .dumi-alita-color-menu .dumi-alita-color-menu-text {
+    height: 55px;
+  }
+
+  .dumi-alita-color-submenu .dumi-alita-color-menu-text {
+    height: 40px;
+  }
+
+  .dumi-alita-color-menu,
+  .dumi-alita-color-submenu {
+    display: block;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    .dumi-alita-color-menu-item {
+      display: list-item;
+      position: relative;
+
+      margin-bottom: 5px;
+      list-style-type: none;
+
+      font-family: @dumi-alita-code-font-family;
+      font-size: 14px;
+
+      svg {
+        transition: 100ms transform;
+        position: absolute;
+        top: 24px;
+        right: 12px;
+        pointer-events: none;
+      }
+
+      .dumi-alita-color-menu-text {
+        display: flex;
+        align-items: center;
+        padding-left: 20px;
+        cursor: pointer;
+
+        .dumi-alita-color-menu-value {
+          margin-left: auto;
+          padding-right: 40px;
+        }
+      }
+
+      .dumi-alita-color-submenu {
+        height: 0;
+        opacity: 0;
+
+        .dumi-alita-color-submenu-item {
+          display: list-item;
+          margin: 0;
+          font-size: 13px;
+          pointer-events: none;
+          transition: 160ms height, 160ms opacity;
+        }
+      }
+    }
+
+    .dumi-alita-color-menu-item-active {
+      svg {
+        transform: rotate(180deg);
+      }
+
+      .dumi-alita-color-submenu {
+        height: 80px;
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+  }
+}
