@@ -8,7 +8,7 @@ const Page = () => {
     <Space>
       <Button href="https://alitajs.com/">外部链接按钮</Button>
       <Button href="/components/card">内部跳转按钮</Button>
-      <Button>no href</Button>
+      <Button round>round</Button>
     </Space>
   );
 };
