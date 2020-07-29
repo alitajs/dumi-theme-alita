@@ -7,7 +7,7 @@ interface CodeColorProps {
 }
 
 const CodeColor: FC<CodeColorProps> = ({ color, value }) => {
-  const display = value || color;
+  const display = value?.trim() || color.trim();
 
   return (
     <span className="dumi-alita-code-color">
