@@ -1,7 +1,11 @@
-interface ColorItemProps {
-  [colorName: string]: string;
+export interface ColorItemProps {
+  name: string;
+  color: string;
+  contrast: string;
+  shade?: string;
+  tint?: string;
 }
 
-export interface ColorProps {
-  [colorName: string]: ColorItemProps;
+export interface ColorAccordionProps {
+  colors: ColorItemProps[];
 }
