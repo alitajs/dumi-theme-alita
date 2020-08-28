@@ -2,10 +2,8 @@
   "name": "dumi-theme-alita",
   "version": "0.0.1-beta.1",
   "scripts": {
-    "start": "concurrently \"npm:start:docs\" \"npm:start:demo\"",
-    "start:docs": "dumi dev",
-    "start:demo": "cross-env PORT=1123 APP_ROOT=demo alita dev",
-    "demo:build": "cross-env APP_ROOT=demo alita build",
+    "start:theme": "cross-env DUMI_THEME=dumi-theme-alita dumi dev",
+    "start": "dumi dev",
     "docs:build": "dumi build",
     "docs:deploy": "gh-pages -d docs-dist",
     "build:w": "father-build -w",
@@ -36,14 +34,13 @@
     "antd": "4.4.3",
     "classnames": "^2.2.6",
     "cross-env": "^7.0.2",
-    "qrcode.react": "^1.0.0",
     "react": "^16.12.0"
   },
   "devDependencies": {
     "@umijs/preset-react": "1.x",
     "@umijs/test": "^3.0.5",
     "concurrently": "^5.2.0",
-    "dumi": "^1.0.9",
+    "dumi": "1.1.0-beta.11",
     "father-build": "^1.17.2",
     "gh-pages": "^3.0.0",
     "lint-staged": "^10.0.7",

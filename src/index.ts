@@ -1,8 +1,7 @@
-export { default as Button } from './Button';
-export { default as Card } from './Card';
-export { default as Cards } from './Cards';
-export { default as ColorAccordion } from './ColorAccordion';
-export { default as CodeColor } from './CodeColor';
-export { default as ContributorList } from './ContributorList';
-export { default as Device } from './Device';
-export { default as Item } from './Item';
+export { default as Button } from './builtins/Button';
+export { default as Card } from './builtins/Card';
+export { default as Cards } from './builtins/Cards';
+export { default as ColorAccordion } from './builtins/ColorAccordion';
+export { default as CodeColor } from './builtins/CodeColor';
+export { default as ContributorList } from './builtins/ContributorList';
+export { default as Item } from './builtins/Item';
