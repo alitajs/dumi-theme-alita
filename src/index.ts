@@ -5,3 +5,4 @@ export { default as ColorAccordion } from './ColorAccordion';
 export { default as CodeColor } from './CodeColor';
 export { default as ContributorList } from './ContributorList';
 export { default as Device } from './Device';
+export { default as Item } from './Item';
